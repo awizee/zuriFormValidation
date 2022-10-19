@@ -85,6 +85,10 @@ input {
   border: none;
   border-bottom: 3px solid #d3d08e;
 }
+input:focus {
+  outline: 2px solid #d3d08e;
+  cursor: pointer;
+}
 .firstname {
   grid-area: a;
 }
@@ -117,6 +121,9 @@ select {
   border: none;
   border-bottom: 3px solid #d3d08e;
 }
+select:focus {
+  outline: 2px solid #d3d08e;
+}
 .color {
   grid-area: h;
 }
@@ -129,6 +136,11 @@ select {
   margin: auto;
   padding: 0.5em;
   width: 70%;
+}
+.submit input:hover {
+  cursor: pointer;
+  background-color: #d3d08e;
+  transition: 1s background-color ease-out;
 }
 a {
   text-decoration: none;
