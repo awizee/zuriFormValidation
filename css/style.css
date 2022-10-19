@@ -14,6 +14,36 @@ body {
   width: 100vw;
   min-height: 100vh;
 }
+header h1 {
+  /* border: 1px solid black; */
+  padding: 1em;
+  text-align: center;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  padding: 1em;
+  height: 100%;
+  background-color: #ffe4c45a;
+  border-radius: 1em;
+}
+main form {
+  padding: 0.5em;
+  display: grid;
+  place-content: center center;
+  grid-template-areas:
+    "a a b b "
+    "c c d d"
+    "e e f f"
+    "g g h h"
+    "i i i i";
+  gap: 1em;
+  margin: auto;
+  width: 50%;
+  height: 100%;
+}
 #login {
   background-image: url("../images/login.jpg");
   background-size: cover;
@@ -37,52 +67,92 @@ body {
   border: 1px solid green;
   border-radius: 0.8em;
 }
-article {
-  width: 60vw;
-  min-height: 50vh;
-  background-color: #eee;
-  border-radius: 1em;
-  padding: 0.5em;
-}
-form {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  justify-content: center;
-  align-items: center;
-  padding: 1em;
-}
+
+
 h2 {
   text-align: center;
 }
 label,
 input {
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 1em;
+  font-weight: 600;
 }
 input {
   margin-bottom: 0.5em;
-  padding: 0.3em;
+  padding: 0.8em;
   border-radius: 0.3em;
+  border: none;
+  border-bottom: 3px solid #d3d08e;
 }
-#gender {
+.firstname {
+  grid-area: a;
+}
+.lasname {
+  grid-area: b;
+}
+.othname {
+  grid-area: c;
+}
+.mail {
+  grid-area: e;
+}
+.number {
+  grid-area: d;
+}
+.birth {
+  grid-area: f;
+}
+#dob {
+  width: 17em;
+  height: 3.5em;
+}
+.sex {
+  grid-area: g;
+}
+select {
+  width: 95%;
   height: 3em;
   border-radius: 0.3em;
+  border: none;
+  border-bottom: 3px solid #d3d08e;
+}
+.color {
+  grid-area: h;
 }
 #favcolor {
-  width: 2em;
-  height: 2em;
+  width: 14em;
+  height: 3em;
 }
-#signin {
-  width: 70%;
+.submit {
+  grid-area: i;
   margin: auto;
-  margin-top: 0.5em;
+  padding: 0.5em;
+  width: 70%;
 }
+a {
+  text-decoration: none;
+}
+
 a {
   color: blue;
   text-decoration: none;
 }
 p {
+  margin-left: 7em;
+  width: 120%;
+  font-weight: 600;
+}
+
+h1 {
   text-align: center;
+  margin: 1em;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 footer {
   color: #eee;
@@ -90,4 +160,19 @@ footer {
   background-color: black;
   width: 1000vh;
   height: 5vh;
+ padding: 0.5em;
 }
+
+@media screen and (max-width: 425px) {
+  main form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+  }
+  main p {
+    margin-left: -1em;
+    width: 150%;
+    font-weight: 600;
+  }
+} 

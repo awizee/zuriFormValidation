@@ -14,27 +14,19 @@
     <main>
       <article>
         <section>
-          <h2>Login</h2>
+          <h1>Login</h1>
         </section>
         <section>
-          <form action="../Week3Tasks/success.html" method="post">
+          <form class="login-form" action="success.html" method="post">
             <label for="email">Email:</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="awizee@example.com"
-              required
-            />
+            <input type="email" name="email" id="email" />
             <label for="pwd">Password:</label>
-            <input
-              type="password"
-              name="password"
-              id="pwd"
-              placeholder="********"
-            />
-            <span><a href="#">Forget Password</a></span>
-            <input id="signin" type="submit" value="Login" />
+            <input type="password" name="password" id="pwd" />
+            <span><a href="/html/forgot.html">Forget Password</a></span>
+            <input type="submit" value="Login" />
+            <span>
+              Don't have an Account ? <a href="signUp.html">Sign Up</a>
+            </span>
           </form>
         </section>
       </article>
