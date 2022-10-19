@@ -87,7 +87,6 @@ input {
 }
 input:focus {
   outline: 2px solid #d3d08e;
-  cursor: pointer;
 }
 .firstname {
   grid-area: a;
@@ -111,6 +110,9 @@ input:focus {
   width: 17em;
   height: 3.5em;
 }
+#dob:hover {
+  cursor: pointer;
+}
 .sex {
   grid-area: g;
 }
@@ -124,12 +126,18 @@ select {
 select:focus {
   outline: 2px solid #d3d08e;
 }
+select:hover {
+  cursor: pointer;
+}
 .color {
   grid-area: h;
 }
 #favcolor {
   width: 14em;
   height: 3em;
+}
+#favcolor:hover {
+  cursor: pointer;
 }
 .submit {
   grid-area: i;
